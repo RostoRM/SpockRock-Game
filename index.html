@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spock Rock Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="text-container">
+        <h1 class="text-title">Don't know rules? read</h1>
+        <span class="emoji"> 😊</span>
+        <p class="text-explination">
+          Oh, it's very simple. Scissors cuts paper, paper covers rock, rock
+          crushes Lizard, Lizard poisons Spock, Spock smashes scissors, scissors
+          decapitates Lizard, Lizard eats paper, paper disproves Spock, Spock
+          vaperizes rock, and as it always has, rock crushes scissors
+        </p>
+      </div>
+
+      <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+          <h1 class="game-title">Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        <!-- Player Container -->
+        <div class="player-container" id="player">
+          <h2>
+            You - <span id="playerScore"></span
+            ><span class="choice" id="playerChoice"></span>
+          </h2>
+          <i
+            class="fa-regular fa-hand-back-fist fa-rock"
+            title="Rock"
+            id="playerRock"
+            onclick="select('rock')"
+          ></i>
+          <i
+            class="fa-regular fa-hand"
+            title="Paper"
+            id="playerPaper"
+            onclick="select('paper')"
+          ></i>
+          <i
+            class="fa-regular fa-hand-scissors"
+            title="Scissors"
+            id="playerScissors"
+            onclick="select('scissors')"
+          ></i>
+          <i
+            class="fa-regular fa-hand-lizard"
+            title="Lizard"
+            id="playerLizard"
+            onclick="select('lizard')"
+          ></i>
+          <i
+            class="fa-regular fa-hand-spock"
+            title="Spock"
+            id="playerSpock"
+            onclick="select('spock')"
+          ></i>
+        </div>
+        <!-- Computer Container -->
+        <div class="computer-container" id="computer">
+          <h2>
+            Computer - <span id="computerScore"></span
+            ><span class="choice" id="computerChoice"></span>
+          </h2>
+          <i
+            class="fa-regular fa-hand-back-fist fa-rock"
+            title="Rock"
+            id="computerRock"
+          ></i>
+          <i class="fa-regular fa-hand" title="Paper" id="computerPaper"></i>
+          <i
+            class="fa-regular fa-hand-scissors"
+            title="Scissors"
+            id="computerScissors"
+          ></i>
+          <i
+            class="fa-regular fa-hand-lizard"
+            title="Lizard"
+            id="computerLizard"
+          ></i>
+          <i
+            class="fa-regular fa-hand-spock"
+            title="Spock"
+            id="computerSpock"
+          ></i>
+        </div>
+        <!-- Reset Icon -->
+        <div class="reset-container">
+          <i
+            class="fa-solid fa-arrows-rotate reset-icon"
+            title="Reset"
+            onclick="resetAll()"
+          ></i>
+        </div>
+        <!-- Results Text -->
+        <div class="result-container">
+          <h3 class="result-text" id="resultText"></h3>
+          <p class="emoji" id="emoji"></p>
+        </div>
+      </div>
+    </main>
+    <!-- Script -->
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

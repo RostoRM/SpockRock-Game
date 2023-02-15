@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900;1000&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: rgb(204, 204, 204);
+  font-family: Lato, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.text-container {
+  width: 39%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 1000;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0;
+  background: #021c38; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #021c38, #068f86, #0c93b5);
+  background: linear-gradient(to right, #021c38, #068f86, #0c93b5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-explination {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+.text-explination::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+.emoji {
+  text-align: center;
+}
+
+.game-container {
+  width: 600px;
+  height: 600px;
+  background: whitesmoke;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 2.5rem 0;
+}
+
+.header {
+  background: #021c38; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #021c38, #068f86, #0c93b5);
+  background: linear-gradient(to right, #021c38, #068f86, #0c93b5);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 1000;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 2.1rem;
+  padding: 0.5rem;
+}
+
+.player-container {
+  margin: 50px;
+}
+
+.computer-container {
+  margin: 50px 50px 25px 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.fa-regular {
+  font-size: 50px;
+  margin-right: 40px;
+}
+.fa-rock {
+  margin-left: 2.7rem;
+}
+
+#player .fa-regular,
+#player .choice {
+  color: rgb(125, 7, 7);
+  cursor: pointer;
+}
+
+#computer .fa-regular,
+#computer .choice {
+  color: rgb(26, 5, 158);
+}
+
+#player .fa-regular:last-of-type,
+#computer .fa-regular:last-of-type {
+  margin-right: 0;
+}
+
+.selected {
+  color: rgb(1, 99, 17) !important;
+}
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+.emoji {
+  font-size: 2.2rem;
+  margin-top: 0.1rem;
+}
+
+.image-container {
+  width: 300px;
+  height: 600px;
+}
+
+.spockRock-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .game-container {
+    width: 95%;
+    height: 580px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .fa-regular {
+    margin-right: 20px;
+  }
+
+  .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container {
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container {
+    margin: 43px 0 25px 20px;
+  }
+
+  .fa-regular {
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 15px;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
