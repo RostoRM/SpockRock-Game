@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;1000&display=swap');
 
 html {
   box-sizing: border-box;
@@ -8,20 +7,22 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: rgb(204, 204, 204);
-  font-family: Lato, sans-serif;
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43c6ac);
+  background: linear-gradient(to right, #191654, #43c6ac);
+  font-family: 'Nunito', sans-serif;
 }
 
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
   width: 100%;
 }
 
 .text-container {
-  width: 39%;
+  width: 32%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,9 +35,23 @@ body {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 0;
-  background: #021c38; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #021c38, #068f86, #0c93b5);
-  background: linear-gradient(to right, #021c38, #068f86, #0c93b5);
+  background: #b6d9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6d9ff, #1be6d8, #8e93f8);
+  background: linear-gradient(to right, #b6d9ff, #1be6d8, #8e93f8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-title_half {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 1000;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0;
+  background: #b6d9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6d9ff, #1be6d8, #8e93f8);
+  background: linear-gradient(to right, #b6d9ff, #1be6d8, #8e93f8);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -44,12 +59,15 @@ body {
 
 .text-explination {
   text-align: justify;
+  font-weight: 1000;
   font-size: 1.4rem;
+  color: whitesmoke;
 }
 
 .text-explination::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
+  font-size: 2.8rem;
+  font-weight: 200;
+  color: #1be6d8;
 }
 
 .emoji {
@@ -60,7 +78,7 @@ body {
   width: 600px;
   height: 600px;
   background: whitesmoke;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 20px -2px rgba(0, 0, 0);
   border-radius: 10px;
   margin: 2.5rem 0;
 }
@@ -109,13 +127,13 @@ h2 {
 
 #player .fa-regular,
 #player .choice {
-  color: rgb(125, 7, 7);
+  color: #068f86;
   cursor: pointer;
 }
 
 #computer .fa-regular,
 #computer .choice {
-  color: rgb(26, 5, 158);
+  color: #191654;
 }
 
 #player .fa-regular:last-of-type,
@@ -124,7 +142,7 @@ h2 {
 }
 
 .selected {
-  color: rgb(1, 99, 17) !important;
+  color: #440dc2 !important;
 }
 
 .reset-container {
